@@ -77,11 +77,13 @@ jinjer-corpus-analysis/
 
 — **Track metadata** for 61 tracks across 7 studio releases (Inhale 2012, Cloud Factory 2014, King of Everything 2016, Micro 2019, Macro 2019, Wallflowers 2021, Duél 2025). Distribution: 8 + 8 + 10 + 4 + 9 + 11 + 11.
 
-— **The analysis pipeline** as a single Python script that implements four hypotheses with thematic dictionaries embedded as Python sets:
-  - **H1** Progressive delocalization (territory: concrete vs metaphorical)
-  - **H2** Post-2022 reactivation of displacement vocabulary
-  - **H3** Conflict frame transformation (passive ratio, resistance, victimhood, first-person agency)
-  - **H4** Gender positional configuration (cross-tabulation of feminine and masculine tokens across five lexical categories with agent/patient ratios via spaCy dependency parsing)
+— **The analysis pipeline** as a single Python script that computes four diagnostic dimensions of the lyrical archive, with thematic dictionaries embedded as Python sets:
+  - **H1 (pipeline label)** Progressive delocalization (territory: concrete vs metaphorical) — diagnostic dimension, not developed in the manuscript
+  - **H2 (pipeline label)** Post-2022 reactivation of displacement vocabulary — addressed in the manuscript as **RQ1** (track-level concentration)
+  - **H3 (pipeline label)** Conflict frame transformation (passive ratio, resistance, victimhood, first-person agency) — diagnostic dimension, not developed in the manuscript
+  - **H4 (pipeline label)** Gender positional configuration (cross-tabulation of feminine and masculine tokens across five lexical categories with agent/patient ratios via spaCy dependency parsing) — addressed in the manuscript as **RQ2** (gender configuration)
+
+The labels H1–H4 are pipeline-internal identifiers tied to the column prefixes (`h1_*`, `h2_*`, `h3_*`, `h4_*`) in the output CSVs. The manuscript develops two of these dimensions as research questions (RQ1 and RQ2) within a framework of *small-corpus computational hermeneutics*.
 
 — **Real pipeline outputs** as committed CSVs that match the numbers reported in the article.
 
@@ -124,18 +126,20 @@ Pipeline outputs go to `outputs/`; figures go to `figures/`. Re-running the pipe
 
 Full reproducibility of the published numbers requires the pinned spaCy + model versions declared in `requirements.txt` (model `en_core_web_sm` 3.7.1, SHA-256 `86cc141f63942d4b2c5fcee06630fd6f904788d2f0ab005cce45aadb8fb73889`). Looser pins admit lemmatizer drift across model releases that changes a small number of token-level decisions; see `docs/changelog.md` v1.0.1-prereview for the audit, the dictionary patch, and a description of the residual non-published columns that still vary slightly with parser version.
 
-## Hypotheses computed
+## Diagnostic dimensions computed by the pipeline
 
-| Hypothesis                                  | Test                       | Result                       | Reported in article            |
-|---------------------------------------------|----------------------------|-----------------------------|--------------------------------|
-| H1 · Progressive delocalization             | Spearman ρ vs year         | NOT SUPPORTED               | not developed in v19e          |
-| H2 · Post-2022 displacement reactivation    | Welch t-test (Duél vs rest)| NOT SUPP at album level     | §3.2, §4.2                     |
-| H3 · Conflict frame transformation          | Spearman ρ × 4 markers     | NOT SUPPORTED               | not developed in v19e          |
-| H4 · Gender positional configuration        | Descriptive (no inference) | n/a                         | §3.5, §4.1, §4.3 (as AASV)    |
+The pipeline operates within a framework of *small-corpus computational hermeneutics*: rather than confirmatory hypothesis-testing, it computes four descriptive diagnostic dimensions of the lyrical archive. Inferential procedures (Spearman ρ, Welch t-test) are reported as **descriptive diagnostics** of release-level distributional properties, not as falsificatory tests. The two dimensions developed analytically in the manuscript are presented as **research questions (RQ1, RQ2)** rather than hypotheses.
 
-The article retains H2's null result transparently and reformulates the displacement finding at track-level (Tumbleweed at 6.58 per 100 lemmas as the empirical anchor). For H4, the article articulates the AASV (allegorical agency and symbolic vacancy) category from the descriptive distribution.
+| Dimension (pipeline label)                  | Diagnostic procedure       | Inferential result              | Manuscript treatment                                      |
+|---------------------------------------------|----------------------------|---------------------------------|-----------------------------------------------------------|
+| H1 · Progressive delocalization             | Spearman ρ vs year         | No monotonic trend (ρ = −0.09 / −0.45) | not developed in v19e                              |
+| H2 · Post-2022 displacement reactivation    | Welch t-test (Duél vs rest)| No release-level mean shift (p = 0.398) | **RQ1** in §3.2: empirical anchor relocated to track-level concentration ('Tumbleweed' at 6.58/100 lemmas) |
+| H3 · Conflict frame transformation          | Spearman ρ × 4 markers     | No monotonic trends             | not developed in v19e                                     |
+| H4 · Gender positional configuration        | Descriptive (no inference) | n/a (descriptive)               | **RQ2** in §3.3–3.6 and §4.1 (AASV category)              |
 
-The repository preserves the full pipeline including H1 and H3 outputs even though the current article does not develop them — these remain available for future authorial work and for transparency about what the pipeline computes.
+The manuscript reports the H2 inferential null transparently and locates the empirical anchor at the track-level concentration documented in §3.2. For H4, the manuscript articulates the AASV (allegorical agency and symbolic vacancy) category from the descriptive distribution; AASV itself is offered prospectively in §5 as a testable configuration for other corpora.
+
+The repository preserves the full pipeline output including H1 and H3 (the two diagnostic dimensions not developed in the current article) for transparency about what the pipeline computes and to support future analytical work.
 
 ## Tools and dependencies
 
@@ -158,7 +162,7 @@ The lyrics themselves remain the property of their respective rights-holders and
 
 ## AI assistance
 
-The pipeline was developed with LLM-collaborative coding assistance (per the `Author` line in `process_corpus_discourse_v3.py`). The dictionaries, analytical decisions, hypothesis specifications, and manual verification are the author's; the implementation of dictionary-search routines, dependency-parsing wrappers, and aggregation code was developed in an LLM-collaborative loop.
+The pipeline was developed with LLM-collaborative coding assistance (per the `Author` line in `process_corpus_discourse_v3.py`). The dictionaries, analytical decisions, research-question specifications, and manual verification are the author's; the implementation of dictionary-search routines, dependency-parsing wrappers, and aggregation code was developed in an LLM-collaborative loop.
 
 The article's AI disclosure (§2.3) discloses this and follows the methodological framework articulated in Karjus (2025) on machine-assisted quantitizing designs.
 

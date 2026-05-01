@@ -8,7 +8,7 @@ The figures are produced by `pipeline/make_figures.py`, which reads `outputs/tra
 
 | File                                | Source columns                                                | Article reference          |
 |-------------------------------------|---------------------------------------------------------------|----------------------------|
-| `fig1_displacement_diachronic`      | `h2_displacement_per100` per track, by album                 | §3.2 (H2 finding)          |
+| `fig1_displacement_diachronic`      | `h2_displacement_per100` per track, by album                 | §3.2 (RQ1 in the manuscript; pipeline H2)          |
 | `fig2_lexical_asymmetry`            | Corpus-wide totals across `h4_*_pron`, `_relational`, `_social_conv`, `_contextual_resolved`, plus age–gender by subtraction | §3.4, Table 4              |
 | `fig3_agent_patient_by_gender`      | `h4_fem_agent_ratio`, `h4_fem_patient_ratio`, masculine equivalents, filtered to tracks with substantive token presence | §3.5, Tables 5a–5b         |
 | `fig4_lexical_category_heatmap`     | `h4_*_pron_per100`, `_relational_per100`, `_social_conv_per100` from `h4_gender_album_detail.csv` | §3.4 (visualised diachronically) |

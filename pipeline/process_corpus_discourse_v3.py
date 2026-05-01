@@ -10,7 +10,7 @@ Version: 3.0 — Adds gender layer (H4) on top of v2 dictionaries.
 CHANGES FROM v2
 ---------------
 v2 calibrated five lexical dictionaries to the actual vocabulary of the corpus.
-v3 adds a fourth analytical hypothesis (H4) operationalized through:
+v3 adds a fourth analytical dimension (H4) operationalized through:
 
   (a) Lexical categories of gender-marked subjects:
       - pronouns (she/her vs he/him)
@@ -620,7 +620,7 @@ def main():
     lang_df = language_proportion_by_album(track_df)
     lang_df.to_csv(OUTPUT_DIR / "language_proportions.csv", index=False)
 
-    print("\n=== HYPOTHESIS TESTS (v3) ===\n")
+    print("\n=== INFERENTIAL DIAGNOSTICS (v3) ===\n")
     h1 = test_h1(album_df)
     h2 = test_h2(track_df)
     h3 = test_h3(album_df)

@@ -6,23 +6,25 @@ The thematic dictionaries used by the pipeline are **embedded as Python sets in 
 
 Open `pipeline/process_corpus_discourse_v3.py` and search for the relevant constant:
 
-| Constant                          | Used by               | Article reference                    |
-|----------------------------------|-----------------------|--------------------------------------|
-| `DICT_TERRITORY_CONCRETE`        | H1                    | not developed in v19e manuscript    |
-| `DICT_TERRITORY_METAPHORICAL`    | H1                    | not developed in v19e manuscript    |
-| `DICT_DISPLACEMENT`              | H2                    | §3.2, §4.2 of manuscript            |
-| `DICT_RESISTANCE`                | H3                    | not developed in v19e manuscript    |
-| `DICT_VICTIMHOOD`                | H3                    | not developed in v19e manuscript    |
-| `PRONOUNS_FEM`                   | H4 (a)                | §3.5, §4.1                          |
-| `PRONOUNS_MASC`                  | H4 (a)                | §3.5, §4.1                          |
-| `NOUNS_RELATIONAL_FEM`           | H4 (b)                | §3.5, Table 4                       |
-| `NOUNS_RELATIONAL_MASC`          | H4 (b)                | §3.5, Table 4                       |
-| `NOUNS_RELATIONAL_NEUTRAL`       | H4 (b)                | §3.5                                |
-| `NOUNS_AGE_GENDER_FEM`           | H4 (c)                | §3.5                                |
-| `NOUNS_AGE_GENDER_MASC`          | H4 (c)                | §3.5                                |
-| `NOUNS_SOCIAL_FEM_BY_CONVENTION` | H4 (d)                | §3.5, §4.1 (queen vs king asymmetry)|
-| `NOUNS_SOCIAL_MASC_BY_CONVENTION`| H4 (d)                | §3.5, §4.1                          |
-| `NOUNS_SOCIAL_CONTEXTUAL`        | H4 (e)                | §3.5, contextually resolved by coreference heuristic |
+The labels H1–H4 in the table below are pipeline-internal identifiers (see `pipeline/README.md` and `docs/methodology.md`). The manuscript develops H2 as **RQ1** (track-level concentration of displacement vocabulary) and H4 as **RQ2** (gender positional configuration); H1 and H3 are diagnostic dimensions not developed analytically in the article.
+
+| Constant                          | Used by (pipeline label) | Article reference                                            |
+|----------------------------------|--------------------------|--------------------------------------------------------------|
+| `DICT_TERRITORY_CONCRETE`        | H1                       | not developed in v19e manuscript                             |
+| `DICT_TERRITORY_METAPHORICAL`    | H1                       | not developed in v19e manuscript                             |
+| `DICT_DISPLACEMENT`              | H2 → manuscript RQ1      | §3.2, §4.2 of manuscript                                     |
+| `DICT_RESISTANCE`                | H3                       | not developed in v19e manuscript                             |
+| `DICT_VICTIMHOOD`                | H3                       | not developed in v19e manuscript                             |
+| `PRONOUNS_FEM`                   | H4 (a) → manuscript RQ2  | §3.5, §4.1                                                   |
+| `PRONOUNS_MASC`                  | H4 (a) → manuscript RQ2  | §3.5, §4.1                                                   |
+| `NOUNS_RELATIONAL_FEM`           | H4 (b) → manuscript RQ2  | §3.5, Table 4                                                |
+| `NOUNS_RELATIONAL_MASC`          | H4 (b) → manuscript RQ2  | §3.5, Table 4                                                |
+| `NOUNS_RELATIONAL_NEUTRAL`       | H4 (b) → manuscript RQ2  | §3.5                                                         |
+| `NOUNS_AGE_GENDER_FEM`           | H4 (c) → manuscript RQ2  | §3.5                                                         |
+| `NOUNS_AGE_GENDER_MASC`          | H4 (c) → manuscript RQ2  | §3.5                                                         |
+| `NOUNS_SOCIAL_FEM_BY_CONVENTION` | H4 (d) → manuscript RQ2  | §3.5, §4.1 (queen vs king asymmetry)                         |
+| `NOUNS_SOCIAL_MASC_BY_CONVENTION`| H4 (d) → manuscript RQ2  | §3.5, §4.1                                                   |
+| `NOUNS_SOCIAL_CONTEXTUAL`        | H4 (e) → manuscript RQ2  | §3.5, contextually resolved by coreference heuristic         |
 
 ## Why dictionaries are embedded in the script
 
@@ -36,7 +38,7 @@ Three reasons:
 
 ## How the dictionaries were constructed
 
-Each dictionary was constructed through a five-step iterative process documented in §2.3 of the article:
+The dictionaries were built through a five-step iterative procedure that is integral to the analytical design rather than a preliminary step external to it. **Iterative refinement after corpus inspection is a defining feature of small-corpus computational hermeneutics** (Werner & Ledermann 2024 on country lyrics; Karjus 2025 on machine-assisted quantitizing designs more generally) — the procedure makes the analytical conventions for each category explicit, traceable, and revisable, and it positions the analysis as exploratory rather than confirmatory. The five steps, documented in §2.3 of the article, are:
 
 **Step 1 · Seed list from analytical question.** Drawn from the relevant analytical literature.
 
@@ -47,6 +49,8 @@ Each dictionary was constructed through a five-step iterative process documented
 **Step 4 · Manual verification.** All hits manually verified. The verification log is in `corpus/verification/`.
 
 **Step 5 · Author re-review.** Dictionaries re-reviewed line by line for analytical coherence.
+
+The `Dictionary Changelog v1→v2` (visible in the diff history of `pipeline/process_corpus_discourse_v3.py`) records the specific terms added or removed at each iteration and the rationale for each modification. Under a strict hypothetico-deductive design, post-hoc dictionary refinement after corpus inspection would compromise the falsificatory status of the test; under the exploratory framework adopted here, the iterative refinement is part of the methodology and is reported transparently as such.
 
 ## Modifying the dictionaries
 

@@ -11,7 +11,7 @@ These outputs are committed to the repository as a reference. Running the pipeli
 | `track_metrics.csv`               | per-track aggregation     | One row per track (61 rows): char count, lemma count, TTR, and per-100-lemma metrics for H1, H2, H3, H4 |
 | `album_metrics.csv`               | per-album aggregation     | One row per release (7 rows): mean per-100-lemma metrics |
 | `language_proportions.csv`        | language detection        | English/Russian proportion per album                     |
-| `hypothesis_tests.csv`            | inferential statistics    | H1 (Spearman), H2 (Welch t-test), H3 (Spearman) results  |
+| `hypothesis_tests.csv`            | inferential diagnostics   | H1 (Spearman), H2 (Welch t-test), H3 (Spearman) release-level diagnostic results — descriptive, not confirmatory; filename retained for backwards compatibility |
 | `h4_gender_descriptive.csv`       | descriptive aggregation   | H4 cross-album means/min/max for gender metrics          |
 | `h4_gender_album_detail.csv`      | per-album detail          | H4 detail per album                                      |
 | `stats/hypothesis_tests_summary.txt` | human-readable summary | Narrative companion to `hypothesis_tests.csv`            |
@@ -27,7 +27,7 @@ The current manuscript v19e reports a subset of the pipeline's full output. The 
 — **Article Table 5a (feminine syntactic)** ←→ `h4_fem_agent_ratio`, `h4_fem_patient_ratio` from `track_metrics.csv`, filtered to tracks with substantive feminine token presence.
 — **Article Table 5b (masculine syntactic)** ←→ idem with masculine columns.
 
-The pipeline computes additional metrics (H1 territory, H3 conflict-frame markers) that the v19e manuscript does not report but that are preserved here for transparency.
+The pipeline computes additional diagnostic dimensions (H1 territory, H3 conflict-frame markers) that are not developed in the v19e manuscript but are preserved here for transparency. The labels H1–H4 are pipeline-internal identifiers; the manuscript develops H2 and H4 as research questions RQ1 and RQ2 respectively, within a framework of small-corpus computational hermeneutics.
 
 ## Note on lyric content
 

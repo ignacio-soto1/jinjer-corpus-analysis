@@ -1,78 +1,90 @@
-Hypothesis tests · pipeline output v3 (real)
-==============================================
+Inferential diagnostics · pipeline output v3 (real)
+====================================================
 
-This file is a human-readable companion to outputs/hypothesis_tests.csv,
+This file is a human-readable companion to outputs/hypothesis_tests.csv
+(filename retained for backwards compatibility with the v1.0.0 release),
 which contains the same numerical results as produced by the analysis
 pipeline (process_corpus_discourse_v3.py).
 
-The pipeline tests four hypotheses (H1 through H4). The current manuscript
-v19e reports primarily H2 and H4 in simplified form. The repo retains the
-full set of pipeline outputs for transparency.
+The pipeline computes four diagnostic dimensions of the lyrical archive,
+internally labelled H1 through H4 (in correspondence with the column
+prefixes h1_*, h2_*, h3_*, h4_* of the per-track and per-album CSVs).
+The manuscript develops H2 (displacement) and H4 (gender configuration)
+as research questions RQ1 and RQ2 respectively, within a framework of
+small-corpus computational hermeneutics. The inferential procedures
+reported below — Spearman ρ for H1 and H3, Welch t-test for H2 — are
+descriptive diagnostics of release-level distributional properties, not
+confirmatory hypothesis tests. The repo retains the full set of pipeline
+outputs for transparency.
 
 
-H1 · Progressive delocalization
-================================
+H1 · Progressive delocalization (diagnostic dimension, not developed)
+======================================================================
 Test type: Spearman rank correlation between concrete vs metaphorical
            territory density and album release year (n_albums = 7).
 
 Concrete territory density:
   rho = -0.09
   p   = 0.8477
-  Conclusion: NOT SUPPORTED (no significant negative trend).
+  Diagnostic: no monotonic trend with year at this corpus scale.
 
 Metaphorical territory density:
-  rho = -0.27
-  p   = 0.5577
-  Conclusion: NOT SUPPORTED.
+  rho = -0.45
+  p   = 0.3104
+  Diagnostic: no monotonic trend with year at this corpus scale.
 
-Pre-registered alpha threshold: 0.10 (exploratory).
+Exploratory significance threshold applied: alpha = 0.10.
 
 
-H2 · Post-2022 reactivation of displacement vocabulary
-=======================================================
-Test type: Welch's t-test between Duél (2025) and rest of corpus, on
-           per-track displacement vocabulary density (per 100 lemmas).
+H2 · Post-2022 reactivation of displacement vocabulary (manuscript RQ1)
+========================================================================
+Diagnostic procedure: Welch's t-test between Duél (2025) and rest of
+           corpus, on per-track displacement vocabulary density
+           (per 100 lemmas).
 
   Duél mean      = 0.754 per 100 lemmas (n_tracks = 11)
   Rest mean      = 0.227 per 100 lemmas (n_tracks = 50)
   t-statistic    = 0.881
   p-value        = 0.398
-  Conclusion: NOT SUPPORTED at the album level (p > 0.10).
+  Diagnostic: no release-level mean shift at exploratory alpha = 0.10.
 
-Note. The high variance within Duél — one outlier track (Tumbleweed) at
-6.58 per 100 lemmas, ten tracks at or near zero — collapses the inferential
-test. The track-level outlier becomes the empirical anchor of the analysis;
-the album-level null result is reported transparently in §3.2 and §4.2 of
-the manuscript.
+Note. The high within-Duél variance — one outlier track (Tumbleweed) at
+6.58 per 100 lemmas, ten tracks at or near zero — collapses the release-
+level diagnostic. Per RQ1 in the manuscript, the empirical anchor is
+relocated to the track-level concentration in 'Tumbleweed', which is
+distinguishable from any track in the rest of the corpus; the release-
+level diagnostic null is reported transparently in §3.2 and §4.2 of the
+manuscript.
 
 
 H3 · Conflict frame transformation
 ====================================
-Tests the diachronic transformation of conflict-frame markers across the
-seven albums (Spearman rank correlation with year).
+Diagnoses the diachronic transformation of conflict-frame markers across
+the seven albums (Spearman rank correlation with year).
 
 H3a · Passive ratio:
-  rho = -0.162, p = 0.7283 — NOT SUPPORTED
+  rho = -0.162, p = 0.7283 — no monotonic trend.
 
 H3b · Resistance vocabulary density:
-  rho = -0.595, p = 0.1591 — NOT SUPPORTED
+  rho = -0.595, p = 0.1591 — no monotonic trend at exploratory alpha = 0.10.
 
 H3c · Victimhood vocabulary density:
-  rho =  0.126, p = 0.7876 — NOT SUPPORTED
+  rho =  0.126, p = 0.7876 — no monotonic trend.
 
 H3d · First-person agent ratio:
-  rho = -0.450, p = 0.3104 — NOT SUPPORTED
+  rho = -0.450, p = 0.3104 — no monotonic trend.
 
-Pre-registered alpha: 0.10. None of the four sub-tests reaches significance.
+Exploratory significance threshold applied: alpha = 0.10. None of the four
+sub-diagnostics reach the threshold at this corpus scale.
 
-Note. The pipeline computes H3 markers but the current manuscript v19e does
-not develop H3 as an analytical thread. The H3 outputs are retained in the
-repo for transparency and for potential later analysis.
+Note. The pipeline computes H3 markers but the current manuscript does not
+develop H3 as an analytical thread. The H3 outputs are retained in the repo
+for transparency and for potential later analysis.
 
 
-H4 · Gender positional configuration
-======================================
-Test type: descriptive (no inferential test pre-registered).
+H4 · Gender positional configuration (manuscript RQ2)
+======================================================
+Procedure: descriptive characterisation (no inferential procedure applied).
 Reports cross-album means of feminine and masculine token densities,
 relational nouns, social-conventional nouns, and agent/patient ratios.
 
