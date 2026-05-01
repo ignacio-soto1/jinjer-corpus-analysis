@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article and the repository as below."
+title: "jinjer-corpus-analysis"
+abstract: >
+  Computational analysis pipeline for the lyrical corpus of the Ukrainian
+  metal band Jinjer (2012-2025). Implements three layers of distant reading:
+  lemma frequency analysis with spaCy, KWIC concordance with thematic
+  dictionaries, and dependency parsing for syntactic role analysis.
+
+# Author information is left as placeholder during double-anonymised peer
+# review. To be replaced with actual author identity upon publication.
+authors:
+  - given-names: "[Given names to be inserted upon acceptance]"
+    family-names: "[Family names to be inserted upon acceptance]"
+    affiliation: "[Affiliation to be inserted upon acceptance]"
+    # orcid: "[ORCID to be inserted upon acceptance]"
+
+version: "1.0.0-prereview"
+date-released: "2026-04-30"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+
+repository-code: "[Repository URL to be inserted]"
+url: "[Repository URL to be inserted]"
+
+keywords:
+  - corpus linguistics
+  - distant reading
+  - popular music studies
+  - heavy metal
+  - Jinjer
+  - female-fronted
+  - dependency parsing
+  - computational discourse analysis
+  - Ukrainian music
+
+preferred-citation:
+  type: article
+  title: "Beyond Female-Fronted: Allegorical Agency and Symbolic Vacancy in Jinjer's Lyrical Corpus (2012-2025)"
+  authors:
+    - given-names: "[Given names to be inserted upon acceptance]"
+      family-names: "[Family names to be inserted upon acceptance]"
+  journal: "Humanities and Social Sciences Communications"
+  publisher:
+    name: "Springer Nature"
+  year: 2026
+  # doi: "[DOI to be inserted upon acceptance]"
+  status: "submitted"

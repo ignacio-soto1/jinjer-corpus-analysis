@@ -1,0 +1,42 @@
+# Core dependencies for jinjer-corpus-analysis
+# Tested with Python 3.9 and 3.12
+#
+# Reproducibility note. The published outputs in `outputs/` were produced with
+# the version pins below. Earlier (looser) constraints — `spacy>=3.7.0,<4.0.0`
+# without a model pin — admit lemmatizer drift across model releases that
+# changes a small number of token-level decisions (most visibly the
+# h2_displacement_per100 value of "Colossus" on Wallflowers). The pins below,
+# combined with the v3.1 dictionary (see `pipeline/process_corpus_discourse_v3.py`,
+# DICT_DISPLACEMENT), reproduce the published numbers. Do not loosen these
+# pins without re-running the full pipeline and updating the published outputs.
+
+# === NLP (pinned for full reproducibility) ===
+spacy>=3.7.0,<3.8.0
+
+# en_core_web_sm 3.7.1 (released 2023-10-09) — the lemmatizer/parser version
+# under which the published outputs were produced. Install with:
+#
+#     pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+#
+# Wheel SHA-256:
+#     86cc141f63942d4b2c5fcee06630fd6f904788d2f0ab005cce45aadb8fb73889
+#
+# Verify after download:
+#     shasum -a 256 en_core_web_sm-3.7.1-py3-none-any.whl
+
+# === Data manipulation ===
+pandas>=2.0.0
+numpy>=1.24.0,<2.0.0
+
+# === Statistics ===
+scipy>=1.11.0
+
+# === Language detection (used for the Russian-track filter) ===
+langdetect>=1.0.9
+
+# === Plotting (optional, for figures replication) ===
+matplotlib>=3.7.0
+
+# === Concordance utilities (optional) ===
+# AntConc 4.x is used for manual verification but is a separate GUI tool
+# downloadable from https://www.laurenceanthony.net/software/antconc/

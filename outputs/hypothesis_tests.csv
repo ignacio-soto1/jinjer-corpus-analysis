@@ -1,0 +1,4 @@
+hypothesis,concrete_rho,concrete_p,metaphorical_rho,metaphorical_p,supported_concrete,supported_metaphorical,duel_mean,rest_mean,t_statistic,p_value,supported,h3_passive_ratio_rho,h3_passive_ratio_p,h3_passive_ratio_supported,h3_resistance_per100_rho,h3_resistance_per100_p,h3_resistance_per100_supported,h3_victimhood_per100_rho,h3_victimhood_per100_p,h3_victimhood_per100_supported,h3_fp_agent_ratio_rho,h3_fp_agent_ratio_p,h3_fp_agent_ratio_supported
+H1 — Progressive delocalization,-0.09,0.8477,-0.45,0.3104,False,False,,,,,,,,,,,,,,,,,
+H2 — Post-2022 reactivation,,,,,,,0.754,0.227,0.881,0.398,False,,,,,,,,,,,,
+H3 — Conflict frame transformation,,,,,,,,,,,,0.018,0.9694,False,-0.595,0.1591,False,0.126,0.7876,False,-0.45,0.3104,False

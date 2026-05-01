@@ -1,0 +1,71 @@
+# ============================================================
+# COPYRIGHT-CRITICAL: never commit lyrics or full text files
+# ============================================================
+corpus/local/*
+corpus/local/**/*
+*.lyrics
+*.txt.full
+
+# But DO commit the structural placeholder
+!corpus/local/README.md
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# ============================================================
+# spaCy model cache (should be installed separately)
+# ============================================================
+*.spacy
+
+# ============================================================
+# IDE / editor
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Jupyter
+# ============================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# ============================================================
+# Generated files (re-runnable from pipeline)
+# ============================================================
+outputs/intermediate/
+outputs/cache/
+*.log
+*.tmp
+
+# ============================================================
+# Personal notes / drafts
+# ============================================================
+notes.md
+draft.md
+TODO_personal.md
+*.bak

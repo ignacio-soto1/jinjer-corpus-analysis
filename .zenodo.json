@@ -1,0 +1,52 @@
+{
+  "title": "jinjer-corpus-analysis",
+  "description": "Computational analysis pipeline for the lyrical corpus of the Ukrainian metal band Jinjer (2012-2025). Implements three layers of distant reading: lemma frequency analysis with spaCy, KWIC concordance with thematic dictionaries, and dependency parsing for syntactic role analysis. Supplementary materials for the article 'Beyond Female-Fronted: Allegorical Agency and Symbolic Vacancy in Jinjer's Lyrical Corpus (2012-2025)' under double-anonymised review at Humanities and Social Sciences Communications.",
+
+  "creators": [
+    {
+      "name": "[Family names], [Given names]",
+      "affiliation": "[Affiliation to be inserted upon acceptance]"
+    }
+  ],
+
+  "_comment_creators": "Author identity is left as placeholder during double-anonymised peer review. ORCID will be added upon acceptance.",
+
+  "access_right": "open",
+  "license": "MIT",
+
+  "keywords": [
+    "corpus linguistics",
+    "distant reading",
+    "popular music studies",
+    "heavy metal",
+    "Jinjer",
+    "computational discourse analysis",
+    "dependency parsing",
+    "spaCy"
+  ],
+
+  "language": "eng",
+
+  "related_identifiers": [
+    {
+      "_comment": "Article DOI to be inserted upon acceptance",
+      "identifier": "[DOI to be inserted upon acceptance]",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    }
+  ],
+
+  "communities": [
+    {"identifier": "humanities"},
+    {"identifier": "music"}
+  ],
+
+  "subjects": [
+    {
+      "term": "Music corpus analysis",
+      "identifier": "https://id.loc.gov/authorities/subjects/sh85088764"
+    }
+  ],
+
+  "version": "1.0.0-prereview"
+}
